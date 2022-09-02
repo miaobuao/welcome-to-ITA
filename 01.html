@@ -2,6 +2,23 @@
     * {
         color: #fff;
     }
+    div {
+        display: none;
+    }
 </style>
 <script src="/randomlog.js"></script>
-<p>279768497</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+<body>
+
+</body>
+
+<script id="js">
+for(let i=0; i<10000; ++i) {
+    let div = document.createElement("div")
+    document.body.appendChild(div)
+}
+const p = document.createElement("p")
+p.innerText = "279768497"
+document.body.appendChild(p)
+document.getElementById('js').innerText = ''
+</script>
