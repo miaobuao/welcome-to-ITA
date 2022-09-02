@@ -1,0 +1,34 @@
+<style>
+    #container{
+        display: flex;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    #container button {
+        margin: 4px;
+    }
+</style>
+<body>
+    <h2>游戏的目标是找到群号</h2>
+    <hr>
+    <div id="container">
+    </div>
+</body>
+
+<script>
+localStorage.clear()
+const container = document.getElementById("container")
+fetch("/config.json").then(d=>d.json()).then(list=>{
+    list.map((url, i)=>{
+        const btn = document.createElement("button")
+        btn.onclick = () => {
+            location.href = url
+        }
+        btn.innerText = `第${i+1}关`
+        container.appendChild(btn)
+    })
+})
+</script>
+
+<!-- 这里也有群号，被你发现了2333  -->
+<!-- 279768497 -->
