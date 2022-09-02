@@ -18,11 +18,11 @@
 <script>
 localStorage.clear()
 const container = document.getElementById("container")
-fetch("/config.json").then(d=>d.json()).then(list=>{
+fetch("./config.json").then(d=>d.json()).then(list=>{
     list.map((url, i)=>{
         const btn = document.createElement("button")
         btn.onclick = () => {
-            location.href = url
+            location.href = "." + url
         }
         btn.innerText = `第${i+1}关`
         container.appendChild(btn)
