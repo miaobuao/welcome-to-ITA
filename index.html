@@ -19,7 +19,7 @@
 <script>
 localStorage.clear()
 const container = document.getElementById("container")
-fetch("./config.json").then(d=>d.json()).then(list=>{
+fetch("./config.json?"+Math.random()).then(d=>d.json()).then(list=>{
     list.map((url, i)=>{
         const btn = document.createElement("button")
         btn.onclick = () => {
